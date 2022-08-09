@@ -1,0 +1,12 @@
+{
+    "name": "LinkedIn auto-visitor",
+    "version": "1.0.0",
+    "description": "automatically visit LinkedIn profiles based on your search",
+    "manifest_version": 3,
+    "author": "Gaëtan Théréau",
+    "action":{
+        "default_popup": "index.html",
+        "default_title": "LinkedIn auto-visitor"
+    },
+    "permissions": ["storage", "declarativeContent", "activeTab", "scripting"]
+}
