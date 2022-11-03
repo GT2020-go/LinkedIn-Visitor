@@ -1,12 +1,23 @@
 {
-    "name": "LinkedIn auto-visitor",
-    "version": "1.0.0",
-    "description": "automatically visit LinkedIn profiles based on your search",
     "manifest_version": 3,
-    "author": "Gaëtan Théréau",
-    "action":{
-        "default_popup": "index.html",
-        "default_title": "LinkedIn auto-visitor"
+    "name": "LinkedIn-visitProfiles",
+    "description": "Open a tab per profile on the People's search page.",
+    "version": "1.0",
+    "icons": {
+      "16": "images/icon-16.png",
+      "32": "images/icon-32.png",
+      "48": "images/icon-48.png",
+      "128": "images/icon-128.png"
     },
-    "permissions": ["storage", "declarativeContent", "activeTab", "scripting"]
+    "background": {"service_worker": "background.js"},
+    "permissions": ["scripting", "activeTab", "tabs"],
+    "host_permissions": ["https://www.linkedin.com/search/results/people/"],
+    "action": {
+        "default_icon": {
+          "16": "images/icon-16.png",
+          "32": "images/icon-32.png",
+          "48": "images/icon-48.png",
+          "128": "images/icon-128.png"
+        }
+      }
 }
